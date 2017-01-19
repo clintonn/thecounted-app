@@ -20,6 +20,7 @@ $(document).ready(() => {
 
   function showResults(response) {
     $('.results-container').append('<p><h3>Results</h3></p>')
+    $('.results-container').append(`<div class='profile-card'><strong>Total Amount of Victims: </strong>${response.length}</div>`)
     response.forEach( (victim) => {
       $('.results-container').append(`<div class='profile-card'> <h3 class='name'>${victim.name}</h3> <table class='details'> <tr> <td class='dod'><strong>Date of Death: </strong>${victim.month}, ${victim.day}, ${victim.year}</td></tr><tr> <td class='location'><strong>Location of Death: </strong>${victim.city}, ${victim.state}</td></tr><tr> <td class='age'><strong>Age: </strong>${victim.age}</td></tr><tr> <td class='sex'><strong>Gender: </strong> ${victim.sex}</td></tr><tr> <td class='race'><strong>Race: </strong>${victim.race}</td></tr><tr> <td class='cause'><strong>Cause of Death: </strong>${victim.cause}</td></tr><tr> <td class='armed'><strong>Armed: </strong>${victim.armed}</td></tr></table></div>`)
     })
