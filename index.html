@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>The Counted App</title>
+  </head>
+  <body>
+    <h1>See how many people were killed by the police by state, year, or race.</h1>
+
+    <form id="counted-search-form" action="index.html" method="post">
+      <label for="option">Option: </label>
+      <select id="option">
+        <option value="state">State</option>
+        <option value="year">Year</option>
+        <option value="race">Race</option>
+      </select>
+      <input type="submit" name="submit" />
+    </form>
+
+    <form id="advanced-search-form" method="post">
+
+
+    </form>
+
+    <div class="results-container">
+      <!-- show the count of victims by category, so if it's year it should show up like this:
+      ///// YEAR ////
+      profile1 profile2 profile3
+     -->
+    </div>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+    </script>
+    <script type="text/javascript" src="js/countedSearch.js">
+
+    </script>
+  </body>
+</html>
